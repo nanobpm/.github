@@ -70,13 +70,24 @@ surfaces without re-platforming: the model and the code are two views of one run
 
 ## Why Nano exists
 
-Many teams want the Camunda 8 model but are blocked from it — by operational complexity, resource
-footprint, cost, or migration friction. Nano exists to remove those blockers:
+There's a new problem emerging in software engineering: **how do you go from fast-pair
+programming with an LLM to orchestrating hundreds of agents?**
 
-1. **Unblock migration to Camunda 8** — name and systematically remove the barriers to the modern process-orchestration model.
-2. **Be a drop-in replacement** — existing BPMN models, client SDKs, and job workers keep working. Switching should feel like an upgrade, not a rewrite.
-3. **Overmatch on the features that decide real evaluations** — clear the bar, then raise it.
-4. **Enter new markets through scale — up *and* down** — from large clusters to the edge and the developer workstation.
+Boris Cherny's [Steps of AI Adoption](https://claude.ai/code/artifact/bfdfaef9-bc62-4dfe-ba9e-c58a26c9accf)
+maps the progression — from a single supervised pair (**Step 1: Assisted**), to an engineer
+orchestrating ~10 agents (**Step 2: Parallel**), to a manager-of-managers running ~100
+(**Step 3: Supervised autonomy**), to steering ~1,000+ by intent (**Step 4: AI-native**). The
+early step is a tooling problem. Everything past it is an **orchestration** problem: durable loops,
+self-verification, review convergence, fan-out and back-pressure, and monitoring by exception.
+
+**Nano solves the problems that emerge from Steps 2 through 4.** As agent count climbs, the
+bottleneck stops being *how fast can one agent code* and becomes *how do a hundred of them run
+reliably, verify their own work, converge with reviewers, and merge — without a human babysitting
+every stream*. That's a process-orchestration problem, and it's the one Nano is built for.
+
+Nano is built for a **single use-case**: **orchestration of SDLC epics with networks of hundreds
+of agents.** It is used internally at Camunda by Camunda engineers. **It is not an official
+product of Camunda.**
 
 <div align="center">
 <sub>Built with reverence for the ideas pioneered by Zeebe and Camunda 8 — and the confidence that the next order of magnitude of scale, simplicity, and delight is still ahead.</sub>
