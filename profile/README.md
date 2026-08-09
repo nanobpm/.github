@@ -21,6 +21,29 @@ Compose coding agents, tools, and human approvals into durable workflows.
 
 ---
 
+## Why Nano exists
+
+There's a new problem emerging in software engineering: **how do you go from fast-pair
+programming with an LLM to orchestrating hundreds of agents?**
+
+Boris Cherny's [Steps of AI Adoption](https://claude.ai/code/artifact/bfdfaef9-bc62-4dfe-ba9e-c58a26c9accf)
+maps the progression — from a single supervised pair (**Step 1: Assisted**), to an engineer
+orchestrating ~10 agents (**Step 2: Parallel**), to a manager-of-managers running ~100
+(**Step 3: Supervised autonomy**), to steering ~1,000+ by intent (**Step 4: AI-native**). The
+early step is a tooling problem. Everything past it is an **orchestration** problem: durable loops,
+self-verification, review convergence, fan-out and back-pressure, and monitoring by exception.
+
+**Nano solves the problems that emerge from Steps 2 through 4.** As agent count climbs, the
+bottleneck stops being *how fast can one agent code* and becomes *how do a hundred of them run
+reliably, verify their own work, converge with reviewers, and merge — without a human babysitting
+every stream*. That's a process-orchestration problem, and it's the one Nano is built for.
+
+Nano is built for a **single use-case**: **orchestration of SDLC epics with networks of hundreds
+of agents.** It is used internally at Camunda by Camunda engineers. **It is not an official
+product of Camunda.**
+
+---
+
 ## What is Nano?
 
 Nano is a high-performance, **Camunda 8-compatible** process automation engine, wrapped in a
@@ -67,27 +90,6 @@ surfaces without re-platforming: the model and the code are two views of one run
 | **The Nano engine** | A **Rust research engine** exploring high-performance BPMN execution behind a Camunda 8-compatible v2 REST API — deterministic event-sourced core, crash-durable journal, SQLite read model, optional Raft replication, and a built-in web console in one binary with no runtime dependencies. Ships to the browser as **[`@nanobpm/engine-wasm`](https://www.npmjs.com/package/@nanobpm/engine-wasm)**; run it via **[nanobpm.io](https://nanobpm.io)**. |
 
 ---
-
-## Why Nano exists
-
-There's a new problem emerging in software engineering: **how do you go from fast-pair
-programming with an LLM to orchestrating hundreds of agents?**
-
-Boris Cherny's [Steps of AI Adoption](https://claude.ai/code/artifact/bfdfaef9-bc62-4dfe-ba9e-c58a26c9accf)
-maps the progression — from a single supervised pair (**Step 1: Assisted**), to an engineer
-orchestrating ~10 agents (**Step 2: Parallel**), to a manager-of-managers running ~100
-(**Step 3: Supervised autonomy**), to steering ~1,000+ by intent (**Step 4: AI-native**). The
-early step is a tooling problem. Everything past it is an **orchestration** problem: durable loops,
-self-verification, review convergence, fan-out and back-pressure, and monitoring by exception.
-
-**Nano solves the problems that emerge from Steps 2 through 4.** As agent count climbs, the
-bottleneck stops being *how fast can one agent code* and becomes *how do a hundred of them run
-reliably, verify their own work, converge with reviewers, and merge — without a human babysitting
-every stream*. That's a process-orchestration problem, and it's the one Nano is built for.
-
-Nano is built for a **single use-case**: **orchestration of SDLC epics with networks of hundreds
-of agents.** It is used internally at Camunda by Camunda engineers. **It is not an official
-product of Camunda.**
 
 <div align="center">
 <sub>Built with reverence for the ideas pioneered by Zeebe and Camunda 8 — and the confidence that the next order of magnitude of scale, simplicity, and delight is still ahead.</sub>
